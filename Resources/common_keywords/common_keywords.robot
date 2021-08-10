@@ -21,6 +21,15 @@ Sign in
 #    Sleep   3s
 #    Page Should Contain     Tilinhallinta ‐ Asiakastiedot
 
+Sign in fail
+    Click element   css:#account
+    Sleep   3s
+    Input text to field    css:#login-form-email-modal     ${USERNAME_FAIL}
+    Input text to field    css:#login-form-password-modal     ${PASSWORD_FAIL}
+    Click button      login-button-modal
+    Sleep   2s
+    Page should contain     Kirjaudu sisään antamalla sähköpostiosoitteesi
+
 Close All Browsers
     Close Browser
 
