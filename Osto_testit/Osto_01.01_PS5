@@ -1,0 +1,21 @@
+*** Settings ***
+Library  SeleniumLibrary
+Resource  ../Resources/common_keywords/common_keywords.robot
+Resource  ../Resources/Variables/Project_variables.robot
+#C:\Users\Rami\PycharmProjects\RobotProjekti\Resources\Variables\Project_variables.robot
+#Test Teardown     Close All Browsers
+
+
+*** Test Cases ***
+Tuotehaku
+    Open Chrome Browser
+    #Maximize Browser Window
+    #Page Should Contain     Verkkokauppa.com – Todennäköisesti aina halvempi
+    Sign in
+    Input text to field    query     playstation 5
+    Click element     submit
+    Sleep   3s
+    Click element   query
+    Valitse linkki     Sony PlayStation 5 (PS5) -pelikonsoli
+    Sleep   3s
+    Odota otsikkoa     Sony PlayStation 5 (PS5) -pelikonsoli

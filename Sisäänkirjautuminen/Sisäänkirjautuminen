@@ -1,0 +1,14 @@
+*** Settings ***
+Library  SeleniumLibrary
+Resource  ../Resources/common_keywords/common_keywords.robot
+#Test Teardown     Close All Browsers
+
+
+*** Variables ***
+
+
+*** Test Cases ***
+Sisäänkirjautuminen
+    Open Chrome Browser
+    Sign in
+
