@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 Resource  ../Resources/common_keywords/common_keywords.robot
 Resource  ../Resources/Variables/Project_variables.robot
 #C:\Users\Rami\PycharmProjects\RobotProjekti\Resources\Variables\Project_variables.robot
-#Test Teardown     Close All Browsers
+Test Teardown     Close All Browsers
 
 
 *** Test Cases ***
