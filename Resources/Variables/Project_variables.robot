@@ -1,3 +1,5 @@
 *** Variables ***
 ${USERNAME}
 ${PASSWORD}
+${USERNAME_FAIL}
+${PASSWORD_FAIL}
