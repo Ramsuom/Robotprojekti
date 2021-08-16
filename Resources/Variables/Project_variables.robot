@@ -1,5 +1,5 @@
 *** Variables ***
-${USERNAME}     rami.suomalainen@hotmail.com
-${PASSWORD}     kauniainen00
+${USERNAME}
+${PASSWORD}
 ${USERNAME_FAIL}
 ${PASSWORD_FAIL}
