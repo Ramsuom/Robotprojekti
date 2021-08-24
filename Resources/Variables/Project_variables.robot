@@ -1,5 +1,5 @@
 *** Variables ***
 ${USERNAME}
 ${PASSWORD}
-${USERNAME_FAIL}
-${PASSWORD_FAIL}
+${USERNAME_FAIL}        sdfcvsdfvwe
+${PASSWORD_FAIL}        sdfsdfsd
