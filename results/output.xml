@@ -1,51 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.8.0 on win32)" generated="20210816 05:16:30.374" rpa="false" schemaversion="2">
-<suite id="s1" name="Osto 01" source="C:\Users\Rami\PycharmProjects\RobotProjekti\Osto_testit\Osto_01.01_PS5">
-<test id="s1-t1" name="Tuotehaku">
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210830 06:45:28.597" rpa="false" schemaversion="2">
+<suite id="s1" name="RobotProjekti" source="C:\Users\Rami\PycharmProjects\RobotProjekti">
+<suite id="s1-s1" name="Haku testit" source="C:\Users\Rami\PycharmProjects\RobotProjekti\Haku_testit">
+<suite id="s1-s1-s1" name="Haku 01.01 tuotehaku" source="C:\Users\Rami\PycharmProjects\RobotProjekti\Haku_testit\Haku_01.01_tuotehaku.robot">
+<test id="s1-s1-s1-t1" name="Tuotehaku">
 <kw name="Open Chrome Browser" library="common_keywords">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://www.verkkokauppa.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210816 05:16:30.594" level="INFO">Opening browser 'chrome' to base url 'https://www.verkkokauppa.com/'.</msg>
-<status status="PASS" starttime="20210816 05:16:30.593" endtime="20210816 05:16:32.861"/>
+<msg timestamp="20210830 06:45:28.798" level="INFO">Opening browser 'chrome' to base url 'https://www.verkkokauppa.com/'.</msg>
+<status status="PASS" starttime="20210830 06:45:28.798" endtime="20210830 06:45:31.299"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210816 05:16:32.861" endtime="20210816 05:16:33.311"/>
+<status status="PASS" starttime="20210830 06:45:31.299" endtime="20210830 06:45:31.443"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Verkkokauppa.com – Todennäköisesti aina halvempi</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20210816 05:16:33.519" level="INFO">Current page contains text 'Verkkokauppa.com – Todennäköisesti aina halvempi'.</msg>
-<status status="PASS" starttime="20210816 05:16:33.311" endtime="20210816 05:16:33.520"/>
+<msg timestamp="20210830 06:45:31.921" level="INFO">Current page contains text 'Verkkokauppa.com – Todennäköisesti aina halvempi'.</msg>
+<status status="PASS" starttime="20210830 06:45:31.443" endtime="20210830 06:45:31.922"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:16:38.534" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20210816 05:16:33.520" endtime="20210816 05:16:38.534"/>
+<msg timestamp="20210830 06:45:36.931" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210830 06:45:31.922" endtime="20210830 06:45:36.931"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#allow-cookies</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:16:38.534" level="INFO">Clicking element 'css:#allow-cookies'.</msg>
-<status status="PASS" starttime="20210816 05:16:38.534" endtime="20210816 05:16:38.724"/>
+<msg timestamp="20210830 06:45:36.932" level="INFO">Clicking element 'css:#allow-cookies'.</msg>
+<status status="PASS" starttime="20210830 06:45:36.931" endtime="20210830 06:45:37.125"/>
 </kw>
-<status status="PASS" starttime="20210816 05:16:30.593" endtime="20210816 05:16:38.724"/>
+<status status="PASS" starttime="20210830 06:45:28.797" endtime="20210830 06:45:37.125"/>
+</kw>
+<kw name="Input text to field" library="common_keywords">
+<arg>query</arg>
+<arg>prosessori</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXTFIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210830 06:45:37.126" level="INFO">Typing text 'prosessori' into text field 'query'.</msg>
+<status status="PASS" starttime="20210830 06:45:37.125" endtime="20210830 06:45:37.311"/>
+</kw>
+<status status="PASS" starttime="20210830 06:45:37.125" endtime="20210830 06:45:37.311"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210830 06:45:37.312" level="INFO">Clicking element 'submit'.</msg>
+<status status="PASS" starttime="20210830 06:45:37.311" endtime="20210830 06:45:37.541"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210830 06:45:40.552" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210830 06:45:37.541" endtime="20210830 06:45:40.552"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>query</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210830 06:45:40.552" level="INFO">Clicking element 'query'.</msg>
+<status status="PASS" starttime="20210830 06:45:40.552" endtime="20210830 06:45:40.627"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Hakutulokset haulle "prosessori"</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210830 06:45:40.966" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210830 06:45:40.844" endtime="20210830 06:45:40.966"/>
+</kw>
+<msg timestamp="20210830 06:45:40.967" level="FAIL">Page should have contained text 'Hakutulokset haulle "prosessori"' but did not.</msg>
+<status status="FAIL" starttime="20210830 06:45:40.629" endtime="20210830 06:45:40.967"/>
+</kw>
+<kw name="Close All Browsers" library="common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210830 06:45:40.968" endtime="20210830 06:45:43.087"/>
+</kw>
+<status status="PASS" starttime="20210830 06:45:40.968" endtime="20210830 06:45:43.087"/>
+</kw>
+<status status="FAIL" starttime="20210830 06:45:28.797" endtime="20210830 06:45:43.088">Page should have contained text 'Hakutulokset haulle "prosessori"' but did not.</status>
+</test>
+<status status="FAIL" starttime="20210830 06:45:28.622" endtime="20210830 06:45:43.089"/>
+</suite>
+<status status="FAIL" starttime="20210830 06:45:28.620" endtime="20210830 06:45:43.092"/>
+</suite>
+<suite id="s1-s2" name="Osto testit" source="C:\Users\Rami\PycharmProjects\RobotProjekti\Osto_testit">
+<suite id="s1-s2-s1" name="Osto 01.01 PS5" source="C:\Users\Rami\PycharmProjects\RobotProjekti\Osto_testit\Osto_01.01_PS5.robot">
+<test id="s1-s2-s1-t1" name="Tuotehaku">
+<kw name="Open Chrome Browser" library="common_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.verkkokauppa.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210830 06:45:43.115" level="INFO">Opening browser 'chrome' to base url 'https://www.verkkokauppa.com/'.</msg>
+<status status="PASS" starttime="20210830 06:45:43.115" endtime="20210830 06:45:45.233"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210830 06:45:45.233" endtime="20210830 06:45:45.361"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Verkkokauppa.com – Todennäköisesti aina halvempi</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210830 06:45:45.383" level="INFO">Current page contains text 'Verkkokauppa.com – Todennäköisesti aina halvempi'.</msg>
+<status status="PASS" starttime="20210830 06:45:45.362" endtime="20210830 06:45:45.383"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210830 06:45:50.384" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210830 06:45:45.383" endtime="20210830 06:45:50.384"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#allow-cookies</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210830 06:45:50.384" level="INFO">Clicking element 'css:#allow-cookies'.</msg>
+<status status="PASS" starttime="20210830 06:45:50.384" endtime="20210830 06:45:50.556"/>
+</kw>
+<status status="PASS" starttime="20210830 06:45:43.114" endtime="20210830 06:45:50.557"/>
 </kw>
 <kw name="Sign in" library="common_keywords">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#account</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:16:38.725" level="INFO">Clicking element 'css:#account'.</msg>
-<status status="PASS" starttime="20210816 05:16:38.725" endtime="20210816 05:16:38.920"/>
+<msg timestamp="20210830 06:45:50.557" level="INFO">Clicking element 'css:#account'.</msg>
+<status status="PASS" starttime="20210830 06:45:50.557" endtime="20210830 06:45:50.695"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:16:41.924" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210816 05:16:38.920" endtime="20210816 05:16:41.925"/>
+<msg timestamp="20210830 06:45:53.709" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210830 06:45:50.695" endtime="20210830 06:45:53.709"/>
 </kw>
 <kw name="Input text to field" library="common_keywords">
 <arg>css:#login-form-email-modal</arg>
@@ -54,10 +145,10 @@
 <arg>${TEXTFIELD}</arg>
 <arg>${TEXT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210816 05:16:41.928" level="INFO">Typing text 'rami.suomalainen@hotmail.com' into text field 'css:#login-form-email-modal'.</msg>
-<status status="PASS" starttime="20210816 05:16:41.928" endtime="20210816 05:16:42.137"/>
+<msg timestamp="20210830 06:45:53.712" level="INFO">Typing text '' into text field 'css:#login-form-email-modal'.</msg>
+<status status="PASS" starttime="20210830 06:45:53.711" endtime="20210830 06:45:53.812"/>
 </kw>
-<status status="PASS" starttime="20210816 05:16:41.926" endtime="20210816 05:16:42.137"/>
+<status status="PASS" starttime="20210830 06:45:53.710" endtime="20210830 06:45:53.812"/>
 </kw>
 <kw name="Input text to field" library="common_keywords">
 <arg>css:#login-form-password-modal</arg>
@@ -66,220 +157,492 @@
 <arg>${TEXTFIELD}</arg>
 <arg>${TEXT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210816 05:16:42.138" level="INFO">Typing text 'kauniainen00' into text field 'css:#login-form-password-modal'.</msg>
-<status status="PASS" starttime="20210816 05:16:42.138" endtime="20210816 05:16:42.256"/>
+<msg timestamp="20210830 06:45:53.813" level="INFO">Typing text '' into text field 'css:#login-form-password-modal'.</msg>
+<status status="PASS" starttime="20210830 06:45:53.813" endtime="20210830 06:45:53.871"/>
 </kw>
-<status status="PASS" starttime="20210816 05:16:42.137" endtime="20210816 05:16:42.256"/>
+<status status="PASS" starttime="20210830 06:45:53.812" endtime="20210830 06:45:53.872"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>login-button-modal</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210816 05:16:42.257" level="INFO">Clicking button 'login-button-modal'.</msg>
-<status status="PASS" starttime="20210816 05:16:42.257" endtime="20210816 05:16:42.380"/>
+<msg timestamp="20210830 06:45:53.872" level="INFO">Clicking button 'login-button-modal'.</msg>
+<status status="PASS" starttime="20210830 06:45:53.872" endtime="20210830 06:45:53.919"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:16:44.383" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 05:16:42.381" endtime="20210816 05:16:44.383"/>
+<msg timestamp="20210830 06:45:55.928" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210830 06:45:53.919" endtime="20210830 06:45:55.928"/>
 </kw>
-<status status="PASS" starttime="20210816 05:16:38.724" endtime="20210816 05:16:44.384"/>
+<status status="PASS" starttime="20210830 06:45:50.557" endtime="20210830 06:45:55.929"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#app &gt; div.sc-19vmxcd-2.kHgGZb.app &gt; header &gt; div &gt; label &gt; svg.icon-sc-td2w5n-0.sc-2stjer-0.YZaTH</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:16:44.387" level="INFO">Clicking element 'css:#app &gt; div.sc-19vmxcd-2.kHgGZb.app &gt; header &gt; div &gt; label &gt; svg.icon-sc-td2w5n-0.sc-2stjer-0.YZaTH'.</msg>
-<status status="PASS" starttime="20210816 05:16:44.386" endtime="20210816 05:16:44.506"/>
+<msg timestamp="20210830 06:45:55.929" level="INFO">Clicking element 'css:#app &gt; div.sc-19vmxcd-2.kHgGZb.app &gt; header &gt; div &gt; label &gt; svg.icon-sc-td2w5n-0.sc-2stjer-0.YZaTH'.</msg>
+<status status="PASS" starttime="20210830 06:45:55.929" endtime="20210830 06:45:56.196"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:16:47.509" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210816 05:16:44.506" endtime="20210816 05:16:47.509"/>
+<msg timestamp="20210830 06:45:59.200" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210830 06:45:56.196" endtime="20210830 06:45:59.200"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#sidebar-item-55a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:16:47.512" level="INFO">Clicking element 'css:#sidebar-item-55a'.</msg>
-<status status="PASS" starttime="20210816 05:16:47.511" endtime="20210816 05:16:47.650"/>
+<msg timestamp="20210830 06:45:59.201" level="INFO">Clicking element 'css:#sidebar-item-55a'.</msg>
+<status status="PASS" starttime="20210830 06:45:59.200" endtime="20210830 06:45:59.335"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:16:50.661" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210816 05:16:47.657" endtime="20210816 05:16:50.661"/>
+<msg timestamp="20210830 06:46:02.347" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210830 06:45:59.335" endtime="20210830 06:46:02.347"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#sidebar-header-main &gt; label &gt; svg.icon-sc-td2w5n-0.sc-2stjer-1.YZaTH</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:16:50.664" level="INFO">Clicking element 'css:#sidebar-header-main &gt; label &gt; svg.icon-sc-td2w5n-0.sc-2stjer-1.YZaTH'.</msg>
-<status status="PASS" starttime="20210816 05:16:50.663" endtime="20210816 05:16:50.747"/>
+<msg timestamp="20210830 06:46:02.347" level="INFO">Clicking element 'css:#sidebar-header-main &gt; label &gt; svg.icon-sc-td2w5n-0.sc-2stjer-1.YZaTH'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210830 06:46:02.450" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210830 06:46:02.358" endtime="20210830 06:46:02.451"/>
+</kw>
+<msg timestamp="20210830 06:46:02.452" level="FAIL">Element with locator 'css:#sidebar-header-main &gt; label &gt; svg.icon-sc-td2w5n-0.sc-2stjer-1.YZaTH' not found.</msg>
+<status status="FAIL" starttime="20210830 06:46:02.347" endtime="20210830 06:46:02.452"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:16:52.757" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 05:16:50.747" endtime="20210816 05:16:52.757"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.452" endtime="20210830 06:46:02.452"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#category-display-window &gt; div:nth-child(1) &gt; div &gt; ol &gt; li:nth-child(2) &gt; div</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:16:52.758" level="INFO">Clicking element 'css:#category-display-window &gt; div:nth-child(1) &gt; div &gt; ol &gt; li:nth-child(2) &gt; div'.</msg>
-<status status="PASS" starttime="20210816 05:16:52.758" endtime="20210816 05:16:52.889"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.452" endtime="20210830 06:46:02.452"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:16:54.903" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 05:16:52.891" endtime="20210816 05:16:54.903"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.452" endtime="20210830 06:46:02.452"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#main &gt; section &gt; aside &gt; div.lt2tbg-0.djQcbD &gt; div:nth-child(2) &gt; div.shipment-details &gt; div.ButtonGroup-sc-1g32o11-0.fba90p-0.bFKYkN.leOQhM &gt; button.Button-sc-mt7im1-0.iBZoPo.jevm7v-0.jqyCPK</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:16:54.904" level="INFO">Clicking element 'css:#main &gt; section &gt; aside &gt; div.lt2tbg-0.djQcbD &gt; div:nth-child(2) &gt; div.shipment-details &gt; div.ButtonGroup-sc-1g32o11-0.fba90p-0.bFKYkN.leOQhM &gt; button.Button-sc-mt7im1-0.iBZoPo.jevm7v-0.jqyCPK'.</msg>
-<status status="PASS" starttime="20210816 05:16:54.903" endtime="20210816 05:16:54.961"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.452" endtime="20210830 06:46:02.452"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:16:56.966" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 05:16:54.961" endtime="20210816 05:16:56.966"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.453" endtime="20210830 06:46:02.453"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:div &gt; div.dropdown-modal.dropdown-modal--cart-dropdown &gt; div &gt; div.Header-sc-c899hf-0.Footer-sc-c899hf-1.ldePEh &gt; div &gt; div.sc-1t0ijj3-0.eKTbBW &gt; a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:16:56.967" level="INFO">Clicking element 'css:div &gt; div.dropdown-modal.dropdown-modal--cart-dropdown &gt; div &gt; div.Header-sc-c899hf-0.Footer-sc-c899hf-1.ldePEh &gt; div &gt; div.sc-1t0ijj3-0.eKTbBW &gt; a'.</msg>
-<status status="PASS" starttime="20210816 05:16:56.967" endtime="20210816 05:16:57.324"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.453" endtime="20210830 06:46:02.453"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:16:59.330" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 05:16:57.324" endtime="20210816 05:16:59.330"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.453" endtime="20210830 06:46:02.453"/>
 </kw>
 <kw name="Odota otsikkoa" library="common_keywords">
 <arg>Ostoskori</arg>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${PAGE}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20210816 05:16:59.358" level="INFO">Current page contains text 'Ostoskori'.</msg>
-<status status="PASS" starttime="20210816 05:16:59.334" endtime="20210816 05:16:59.358"/>
-</kw>
-<status status="PASS" starttime="20210816 05:16:59.332" endtime="20210816 05:16:59.358"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.453" endtime="20210830 06:46:02.453"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#app &gt; main &gt; div &gt; div &gt; div.vk-pages &gt; div.vk-pages-sticky_footer &gt; div &gt; a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:16:59.359" level="INFO">Clicking element 'css:#app &gt; main &gt; div &gt; div &gt; div.vk-pages &gt; div.vk-pages-sticky_footer &gt; div &gt; a'.</msg>
-<status status="PASS" starttime="20210816 05:16:59.359" endtime="20210816 05:16:59.456"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.453" endtime="20210830 06:46:02.453"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:17:01.458" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 05:16:59.457" endtime="20210816 05:17:01.458"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.453" endtime="20210830 06:46:02.453"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#app &gt; main &gt; div &gt; div &gt; div.vk-pages &gt; div.vk-pages__container.vk-pages__container--address &gt; div &gt; section &gt; ul &gt; li:nth-child(1)</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:17:01.459" level="INFO">Clicking element 'css:#app &gt; main &gt; div &gt; div &gt; div.vk-pages &gt; div.vk-pages__container.vk-pages__container--address &gt; div &gt; section &gt; ul &gt; li:nth-child(1)'.</msg>
-<status status="PASS" starttime="20210816 05:17:01.459" endtime="20210816 05:17:01.505"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.453" endtime="20210830 06:46:02.453"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:17:03.508" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 05:17:01.506" endtime="20210816 05:17:03.508"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.453" endtime="20210830 06:46:02.453"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#app &gt; main &gt; div &gt; div &gt; div.vk-pages &gt; div.vk-pages-sticky_footer &gt; div &gt; a.vk-pointy-button.vk-pointy-button--right.vk-pointy-button--primary.vk-pointy-button--next-step</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:17:03.510" level="INFO">Clicking element 'css:#app &gt; main &gt; div &gt; div &gt; div.vk-pages &gt; div.vk-pages-sticky_footer &gt; div &gt; a.vk-pointy-button.vk-pointy-button--right.vk-pointy-button--primary.vk-pointy-button--next-step'.</msg>
-<status status="PASS" starttime="20210816 05:17:03.510" endtime="20210816 05:17:03.637"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.453" endtime="20210830 06:46:02.454"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:17:05.638" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 05:17:03.637" endtime="20210816 05:17:05.638"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.454" endtime="20210830 06:46:02.454"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#app &gt; main &gt; div &gt; div &gt; div.vk-pages &gt; div.vk-pages__container.vk-pages__container--shipment &gt; div &gt; section &gt; ul &gt; li.panel.panel--shipment-group-pickup.panel--checked.panel--has-content.panel--is-visible &gt; div &gt; div &gt; ul &gt; li.panel.panel--shipment-method-1.panel--first-item.panel--has-content.panel--is-visible &gt; label &gt; a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:17:05.642" level="INFO">Clicking element 'css:#app &gt; main &gt; div &gt; div &gt; div.vk-pages &gt; div.vk-pages__container.vk-pages__container--shipment &gt; div &gt; section &gt; ul &gt; li.panel.panel--shipment-group-pickup.panel--checked.panel--has-content.panel--is-visible &gt; div &gt; div &gt; ul &gt; li.panel.panel--shipment-method-1.panel--first-item.panel--has-content.panel--is-visible &gt; label &gt; a'.</msg>
-<status status="PASS" starttime="20210816 05:17:05.641" endtime="20210816 05:17:05.708"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.454" endtime="20210830 06:46:02.454"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:17:07.714" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 05:17:05.708" endtime="20210816 05:17:07.715"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.454" endtime="20210830 06:46:02.454"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#app &gt; main &gt; div &gt; div &gt; div.vk-pages &gt; div.vk-pages-sticky_footer &gt; div &gt; a.vk-pointy-button.vk-pointy-button--right.vk-pointy-button--primary.vk-pointy-button--next-step</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:17:07.718" level="INFO">Clicking element 'css:#app &gt; main &gt; div &gt; div &gt; div.vk-pages &gt; div.vk-pages-sticky_footer &gt; div &gt; a.vk-pointy-button.vk-pointy-button--right.vk-pointy-button--primary.vk-pointy-button--next-step'.</msg>
-<status status="PASS" starttime="20210816 05:17:07.717" endtime="20210816 05:17:07.875"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.454" endtime="20210830 06:46:02.454"/>
 </kw>
 <kw name="Odota otsikkoa" library="common_keywords">
 <arg>Valitse maksutapa</arg>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${PAGE}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20210816 05:17:07.896" level="INFO">Current page contains text 'Valitse maksutapa'.</msg>
-<status status="PASS" starttime="20210816 05:17:07.876" endtime="20210816 05:17:07.896"/>
+<status status="NOT RUN" starttime="20210830 06:46:02.454" endtime="20210830 06:46:02.454"/>
 </kw>
-<status status="PASS" starttime="20210816 05:17:07.876" endtime="20210816 05:17:07.896"/>
+<kw name="Close All Browsers" library="common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210830 06:46:02.455" endtime="20210830 06:46:04.584"/>
 </kw>
-<status status="PASS" starttime="20210816 05:16:30.592" endtime="20210816 05:17:07.897"/>
+<status status="PASS" starttime="20210830 06:46:02.454" endtime="20210830 06:46:04.585"/>
+</kw>
+<status status="FAIL" starttime="20210830 06:45:43.112" endtime="20210830 06:46:04.585">Element with locator 'css:#sidebar-header-main &gt; label &gt; svg.icon-sc-td2w5n-0.sc-2stjer-1.YZaTH' not found.</status>
 </test>
-<test id="s1-t2" name="Poista Tuote">
+<test id="s1-s2-s1-t2" name="Poista Tuote">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#app &gt; main &gt; div &gt; div &gt; div.vk-steps-container.vk-steps-container--payment &gt; div.vk-steps.vk-steps--payment.vk-steps--enabled &gt; div:nth-child(1)</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:17:07.899" level="INFO">Clicking element 'css:#app &gt; main &gt; div &gt; div &gt; div.vk-steps-container.vk-steps-container--payment &gt; div.vk-steps.vk-steps--payment.vk-steps--enabled &gt; div:nth-child(1)'.</msg>
-<status status="PASS" starttime="20210816 05:17:07.899" endtime="20210816 05:17:08.000"/>
+<msg timestamp="20210830 06:46:04.589" level="INFO">Clicking element 'css:#app &gt; main &gt; div &gt; div &gt; div.vk-steps-container.vk-steps-container--payment &gt; div.vk-steps.vk-steps--payment.vk-steps--enabled &gt; div:nth-child(1)'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210830 06:46:04.590" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210830 06:46:04.589" endtime="20210830 06:46:04.590"/>
+</kw>
+<msg timestamp="20210830 06:46:04.593" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20210830 06:46:04.588" endtime="20210830 06:46:04.593"/>
 </kw>
 <kw name="Odota otsikkoa" library="common_keywords">
 <arg>Ostoskori</arg>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${PAGE}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20210816 05:17:08.013" level="INFO">Current page contains text 'Ostoskori'.</msg>
-<status status="PASS" starttime="20210816 05:17:08.001" endtime="20210816 05:17:08.013"/>
-</kw>
-<status status="PASS" starttime="20210816 05:17:08.001" endtime="20210816 05:17:08.013"/>
+<status status="NOT RUN" starttime="20210830 06:46:04.594" endtime="20210830 06:46:04.594"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:#app &gt; main &gt; div &gt; div &gt; div.vk-pages &gt; div.vk-pages__container.vk-pages__container--cart &gt; div &gt; section &gt; ul &gt; li &gt; div &gt; div.vk-cart-item__content &gt; div:nth-child(1) &gt; div.vk-cart-item__properties &gt; div &gt; div:nth-child(1) &gt; div &gt; button:nth-child(1)</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 05:17:08.014" level="INFO">Clicking element 'css:#app &gt; main &gt; div &gt; div &gt; div.vk-pages &gt; div.vk-pages__container.vk-pages__container--cart &gt; div &gt; section &gt; ul &gt; li &gt; div &gt; div.vk-cart-item__content &gt; div:nth-child(1) &gt; div.vk-cart-item__properties &gt; div &gt; div:nth-child(1) &gt; div &gt; button:nth-child(1)'.</msg>
-<status status="PASS" starttime="20210816 05:17:08.014" endtime="20210816 05:17:08.057"/>
+<status status="NOT RUN" starttime="20210830 06:46:04.594" endtime="20210830 06:46:04.595"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>confirm</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210816 05:17:08.057" level="INFO">Clicking button 'confirm'.</msg>
-<status status="PASS" starttime="20210816 05:17:08.057" endtime="20210816 05:17:08.121"/>
+<status status="NOT RUN" starttime="20210830 06:46:04.595" endtime="20210830 06:46:04.595"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 05:17:13.130" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20210816 05:17:08.122" endtime="20210816 05:17:13.130"/>
+<status status="NOT RUN" starttime="20210830 06:46:04.595" endtime="20210830 06:46:04.596"/>
 </kw>
-<status status="PASS" starttime="20210816 05:17:07.898" endtime="20210816 05:17:13.133"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20210830 06:46:04.596" endtime="20210830 06:46:04.596"/>
+</kw>
+<kw name="Close All Browsers" library="common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210830 06:46:04.598" endtime="20210830 06:46:04.599"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:04.597" endtime="20210830 06:46:04.599"/>
+</kw>
+<status status="FAIL" starttime="20210830 06:46:04.586" endtime="20210830 06:46:04.600">No browser is open.</status>
 </test>
-<status status="PASS" starttime="20210816 05:16:30.375" endtime="20210816 05:17:13.139"/>
+<status status="FAIL" starttime="20210830 06:45:43.100" endtime="20210830 06:46:04.601"/>
+</suite>
+<status status="FAIL" starttime="20210830 06:45:43.094" endtime="20210830 06:46:04.604"/>
+</suite>
+<suite id="s1-s3" name="Sisäänkirjautuminen" source="C:\Users\Rami\PycharmProjects\RobotProjekti\Sisäänkirjautuminen">
+<suite id="s1-s3-s1" name="Kikkeli" source="C:\Users\Rami\PycharmProjects\RobotProjekti\Sisäänkirjautuminen\Kikkeli.robot">
+<test id="s1-s3-s1-t1" name="Sisäänkirjautuminen">
+<kw name="sdvcvxcbbcvbcv">
+<msg timestamp="20210830 06:46:04.620" level="FAIL">No keyword with name 'sdvcvxcbbcvbcv' found.</msg>
+<status status="FAIL" starttime="20210830 06:46:04.620" endtime="20210830 06:46:04.620"/>
+</kw>
+<kw name="Close All Browsers" library="common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210830 06:46:04.621" endtime="20210830 06:46:04.621"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:04.621" endtime="20210830 06:46:04.621"/>
+</kw>
+<status status="FAIL" starttime="20210830 06:46:04.616" endtime="20210830 06:46:04.622">No keyword with name 'sdvcvxcbbcvbcv' found.</status>
+</test>
+<test id="s1-s3-s1-t2" name="Epäonnistunut sisäänkirjautuminen">
+<kw name="sdfcvcxvdvs">
+<msg timestamp="20210830 06:46:04.625" level="FAIL">No keyword with name 'sdfcvcxvdvs' found.</msg>
+<status status="FAIL" starttime="20210830 06:46:04.625" endtime="20210830 06:46:04.625"/>
+</kw>
+<kw name="Close All Browsers" library="common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210830 06:46:04.626" endtime="20210830 06:46:04.626"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:04.625" endtime="20210830 06:46:04.626"/>
+</kw>
+<status status="FAIL" starttime="20210830 06:46:04.622" endtime="20210830 06:46:04.626">No keyword with name 'sdfcvcxvdvs' found.</status>
+</test>
+<test id="s1-s3-s1-t3" name="Uusi testi">
+<kw name="aszxzxczxczx">
+<msg timestamp="20210830 06:46:04.629" level="FAIL">No keyword with name 'aszxzxczxczx' found.</msg>
+<status status="FAIL" starttime="20210830 06:46:04.629" endtime="20210830 06:46:04.629"/>
+</kw>
+<kw name="Close All Browsers" library="common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210830 06:46:04.630" endtime="20210830 06:46:04.630"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:04.629" endtime="20210830 06:46:04.630"/>
+</kw>
+<status status="FAIL" starttime="20210830 06:46:04.626" endtime="20210830 06:46:04.630">No keyword with name 'aszxzxczxczx' found.</status>
+</test>
+<status status="FAIL" starttime="20210830 06:46:04.610" endtime="20210830 06:46:04.630"/>
+</suite>
+<suite id="s1-s3-s2" name="Sisäänkirjautuminen" source="C:\Users\Rami\PycharmProjects\RobotProjekti\Sisäänkirjautuminen\Sisäänkirjautuminen.robot">
+<test id="s1-s3-s2-t1" name="Sisäänkirjautuminen">
+<kw name="Open Chrome Browser" library="common_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.verkkokauppa.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210830 06:46:04.636" level="INFO">Opening browser 'chrome' to base url 'https://www.verkkokauppa.com/'.</msg>
+<status status="PASS" starttime="20210830 06:46:04.636" endtime="20210830 06:46:07.259"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210830 06:46:07.259" endtime="20210830 06:46:07.564"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Verkkokauppa.com – Todennäköisesti aina halvempi</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210830 06:46:07.627" level="INFO">Current page contains text 'Verkkokauppa.com – Todennäköisesti aina halvempi'.</msg>
+<status status="PASS" starttime="20210830 06:46:07.565" endtime="20210830 06:46:07.627"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210830 06:46:12.631" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210830 06:46:07.627" endtime="20210830 06:46:12.631"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#allow-cookies</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210830 06:46:12.631" level="INFO">Clicking element 'css:#allow-cookies'.</msg>
+<status status="PASS" starttime="20210830 06:46:12.631" endtime="20210830 06:46:12.791"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:04.636" endtime="20210830 06:46:12.791"/>
+</kw>
+<kw name="Sign in" library="common_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#account</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210830 06:46:12.792" level="INFO">Clicking element 'css:#account'.</msg>
+<status status="PASS" starttime="20210830 06:46:12.791" endtime="20210830 06:46:12.925"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210830 06:46:15.938" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210830 06:46:12.925" endtime="20210830 06:46:15.938"/>
+</kw>
+<kw name="Input text to field" library="common_keywords">
+<arg>css:#login-form-email-modal</arg>
+<arg>${USERNAME}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXTFIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210830 06:46:15.939" level="INFO">Typing text '' into text field 'css:#login-form-email-modal'.</msg>
+<status status="PASS" starttime="20210830 06:46:15.938" endtime="20210830 06:46:16.015"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:15.938" endtime="20210830 06:46:16.015"/>
+</kw>
+<kw name="Input text to field" library="common_keywords">
+<arg>css:#login-form-password-modal</arg>
+<arg>${PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXTFIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210830 06:46:16.015" level="INFO">Typing text '' into text field 'css:#login-form-password-modal'.</msg>
+<status status="PASS" starttime="20210830 06:46:16.015" endtime="20210830 06:46:16.089"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:16.015" endtime="20210830 06:46:16.089"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button-modal</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210830 06:46:16.089" level="INFO">Clicking button 'login-button-modal'.</msg>
+<status status="PASS" starttime="20210830 06:46:16.089" endtime="20210830 06:46:16.147"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210830 06:46:18.163" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210830 06:46:16.147" endtime="20210830 06:46:18.163"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:12.791" endtime="20210830 06:46:18.163"/>
+</kw>
+<kw name="Close All Browsers" library="common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210830 06:46:18.164" endtime="20210830 06:46:20.328"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:18.164" endtime="20210830 06:46:20.328"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:04.635" endtime="20210830 06:46:20.328"/>
+</test>
+<test id="s1-s3-s2-t2" name="Epäonnistunut sisäänkirjautuminen">
+<kw name="Open Chrome Browser" library="common_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.verkkokauppa.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210830 06:46:20.330" level="INFO">Opening browser 'chrome' to base url 'https://www.verkkokauppa.com/'.</msg>
+<status status="PASS" starttime="20210830 06:46:20.329" endtime="20210830 06:46:22.496"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210830 06:46:22.496" endtime="20210830 06:46:22.949"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Verkkokauppa.com – Todennäköisesti aina halvempi</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210830 06:46:23.121" level="INFO">Current page contains text 'Verkkokauppa.com – Todennäköisesti aina halvempi'.</msg>
+<status status="PASS" starttime="20210830 06:46:22.949" endtime="20210830 06:46:23.121"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210830 06:46:28.124" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210830 06:46:23.121" endtime="20210830 06:46:28.124"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#allow-cookies</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210830 06:46:28.124" level="INFO">Clicking element 'css:#allow-cookies'.</msg>
+<status status="PASS" starttime="20210830 06:46:28.124" endtime="20210830 06:46:28.323"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:20.329" endtime="20210830 06:46:28.323"/>
+</kw>
+<kw name="Sign in fail" library="common_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#account</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210830 06:46:28.324" level="INFO">Clicking element 'css:#account'.</msg>
+<status status="PASS" starttime="20210830 06:46:28.324" endtime="20210830 06:46:28.463"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210830 06:46:31.476" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210830 06:46:28.463" endtime="20210830 06:46:31.476"/>
+</kw>
+<kw name="Input text to field" library="common_keywords">
+<arg>css:#login-form-email-modal</arg>
+<arg>${USERNAME_FAIL}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXTFIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210830 06:46:31.479" level="INFO">Typing text 'testi' into text field 'css:#login-form-email-modal'.</msg>
+<status status="PASS" starttime="20210830 06:46:31.478" endtime="20210830 06:46:31.575"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:31.477" endtime="20210830 06:46:31.576"/>
+</kw>
+<kw name="Input text to field" library="common_keywords">
+<arg>css:#login-form-password-modal</arg>
+<arg>${PASSWORD_FAIL}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXTFIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210830 06:46:31.576" level="INFO">Typing text 'moro' into text field 'css:#login-form-password-modal'.</msg>
+<status status="PASS" starttime="20210830 06:46:31.576" endtime="20210830 06:46:31.668"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:31.576" endtime="20210830 06:46:31.668"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button-modal</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210830 06:46:31.669" level="INFO">Clicking button 'login-button-modal'.</msg>
+<status status="PASS" starttime="20210830 06:46:31.669" endtime="20210830 06:46:31.740"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210830 06:46:33.753" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210830 06:46:31.740" endtime="20210830 06:46:33.753"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Kirjaudu sisään antamalla sähköpostiosoitteesi</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210830 06:46:33.782" level="INFO">Current page contains text 'Kirjaudu sisään antamalla sähköpostiosoitteesi'.</msg>
+<status status="PASS" starttime="20210830 06:46:33.753" endtime="20210830 06:46:33.782"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:28.323" endtime="20210830 06:46:33.782"/>
+</kw>
+<kw name="Close All Browsers" library="common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210830 06:46:33.784" endtime="20210830 06:46:35.897"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:33.783" endtime="20210830 06:46:35.898"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:20.329" endtime="20210830 06:46:35.898"/>
+</test>
+<test id="s1-s3-s2-t3" name="Uusi testi">
+<status status="FAIL" starttime="20210830 06:46:35.899" endtime="20210830 06:46:35.901">Test case contains no keywords.</status>
+</test>
+<status status="FAIL" starttime="20210830 06:46:04.631" endtime="20210830 06:46:35.902"/>
+</suite>
+<status status="FAIL" starttime="20210830 06:46:04.606" endtime="20210830 06:46:35.903"/>
+</suite>
+<suite id="s1-s4" name="Sivun aloitus" source="C:\Users\Rami\PycharmProjects\RobotProjekti\Sivun_aloitus">
+<suite id="s1-s4-s1" name="Open" source="C:\Users\Rami\PycharmProjects\RobotProjekti\Sivun_aloitus\open.robot">
+<test id="s1-s4-s1-t1" name="Testi keissi">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.verkkokauppa.com/</arg>
+<arg>headlesschrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210830 06:46:35.909" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.verkkokauppa.com/'.</msg>
+<status status="PASS" starttime="20210830 06:46:35.909" endtime="20210830 06:46:37.955"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210830 06:46:37.955" endtime="20210830 06:46:40.009"/>
+</kw>
+<status status="PASS" starttime="20210830 06:46:35.908" endtime="20210830 06:46:40.009"/>
+</test>
+<status status="PASS" starttime="20210830 06:46:35.906" endtime="20210830 06:46:40.010"/>
+</suite>
+<status status="PASS" starttime="20210830 06:46:35.904" endtime="20210830 06:46:40.011"/>
+</suite>
+<status status="FAIL" starttime="20210830 06:45:28.599" endtime="20210830 06:46:40.012"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="7" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Osto 01">Osto 01</stat>
+<stat pass="3" fail="7" skip="0" id="s1" name="RobotProjekti">RobotProjekti</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Haku testit">RobotProjekti.Haku testit</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Haku 01.01 tuotehaku">RobotProjekti.Haku testit.Haku 01.01 tuotehaku</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s2" name="Osto testit">RobotProjekti.Osto testit</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s2-s1" name="Osto 01.01 PS5">RobotProjekti.Osto testit.Osto 01.01 PS5</stat>
+<stat pass="2" fail="4" skip="0" id="s1-s3" name="Sisäänkirjautuminen">RobotProjekti.Sisäänkirjautuminen</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s3-s1" name="Kikkeli">RobotProjekti.Sisäänkirjautuminen.Kikkeli</stat>
+<stat pass="2" fail="1" skip="0" id="s1-s3-s2" name="Sisäänkirjautuminen">RobotProjekti.Sisäänkirjautuminen.Sisäänkirjautuminen</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="Sivun aloitus">RobotProjekti.Sivun aloitus</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4-s1" name="Open">RobotProjekti.Sivun aloitus.Open</stat>
 </suite>
 </statistics>
 <errors>

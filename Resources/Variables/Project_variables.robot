@@ -1,5 +1,5 @@
 *** Variables ***
 ${USERNAME}
 ${PASSWORD}
-${USERNAME_FAIL}        sdfcvsdfvwe
-${PASSWORD_FAIL}        sdfsdfsd
+${USERNAME_FAIL}        testi
+${PASSWORD_FAIL}        moro
