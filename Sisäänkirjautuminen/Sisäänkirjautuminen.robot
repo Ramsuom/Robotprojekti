@@ -1,7 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource  ../Resources/common_keywords/common_keywords.robot
-Test Teardown     Close All Browsers
+Test Teardown     Close Browsers
 
 
 *** Variables ***
